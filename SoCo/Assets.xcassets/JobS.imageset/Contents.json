@@ -1,0 +1,21 @@
+{
+  "images" : [
+    {
+      "filename" : "D5A61DA5-3112-4CC1-BBD8-453B73F01B8Dcrunch-time-concept-in-flat-cartoon-design-overworked-man-and-woman-working-in-office-late-at-night-business-deadline-overtime-stress-at-work-illustration-with-people-scene-background-vector.heic",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}
