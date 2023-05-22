@@ -14,14 +14,16 @@ struct SurveyPage: View {
 //            background(Color("ColorM"))
             VStack(alignment: .center) {
                 Text("Which setting do you feel least comfortable in?")
+                    .font(.custom("Courier New", size:30))
                     .border(.brown)
                     .font(.title)
                 
                 Text("3 ⭐️'s most comfortable ")
+                    .font(.custom("Courier New", size:14))
                 
                     //VStack {
                         Text("Workplace")
-                    .font(.title)
+                    .font(.custom("Courier New", size:24))
                 HStack {Image(systemName: "star")
                         .font(.title)
                         .foregroundColor(Color("ColorST"))
@@ -34,7 +36,7 @@ struct SurveyPage: View {
                 //    }
                 }
             Text("School")
-                    .font(.title)
+                    .font(.custom("Courier New", size:24))
                 HStack { Image(systemName: "star")
                         .font(.title)
                         .foregroundColor(Color("ColorST"))
@@ -47,7 +49,7 @@ struct SurveyPage: View {
 
                 }
             Text("Social Gathering")
-                    .font(.title)
+                    .font(.custom("Courier New", size:24))
                 HStack {   Image(systemName: "star")
                         .font(.title)
                         .foregroundColor(Color("ColorST"))
@@ -61,6 +63,7 @@ struct SurveyPage: View {
                     }
                 HStack {
                     Text("Continue")
+                        .font(.custom("Courier New", size:18))
                 }
                 
             }

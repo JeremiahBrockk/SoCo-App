@@ -14,10 +14,11 @@ struct SurveyDisclaimer: View {
                 Text("(Disclaimer) not intended as substitute for medical advice... etc")
                     .border(.black)
                 
-                    .font(.title)
+                    .font(.custom("Courier New", size:24))
                 Text("privacy policy")
-                
+                    .font(.custom("Courier New", size:14))
                 Text("I understand and wish to continue")
+                    .font(.custom("Courier New", size:14))
                 Button("Continue") {
                     
                 }

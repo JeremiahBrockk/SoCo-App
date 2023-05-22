@@ -11,10 +11,12 @@ struct FirstPage: View {
     var body: some View {
         VStack {
             Text("Before We Continue...")
+                .font(.custom("Courier New", size:17))
                 .fontWeight(.bold)
                 .foregroundColor(Color.black)
             Spacer()
             Text("in order to create a more personal experience, please complete this short survey")
+                .font(.custom("Courier New", size:13))
             Spacer()
             Spacer()
             Spacer()
