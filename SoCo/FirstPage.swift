@@ -17,27 +17,30 @@ struct FirstPage: View {
             Spacer()
             Text("in order to create a more personal experience, please complete this short survey")
                 .font(.custom("Courier New", size:13))
+                .multilineTextAlignment(.center)
             Spacer()
             Spacer()
             Spacer()
             Spacer()
             Spacer()
 //
-            Button("Button Label") {
+            Button("OKAY!") {
 
             }
-            .buttonStyle(.bordered)
-            .tint(.gray)
+         //   .buttonStyle(.bordered)
+            .tint(.black)
+            .border(.black)
+            .font(.title)
 
 
-            Button("Button Label") {
+            Button("Skip") {
 
             }
-            .buttonStyle(.borderedProminent)
+          //  .buttonStyle(.borderedProminent)
 
-            .tint(.pink)
+            .tint(.black)
            // Button("Skip") {
-                
+            
             //}
             
         }

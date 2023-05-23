@@ -13,8 +13,8 @@
 		0F9FD6BC2A1BB89300267F95 /* SurveyPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F9FD6BB2A1BB89300267F95 /* SurveyPage.swift */; };
 		0F9FD6C12A1BC76000267F95 /* Courier New.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0F9FD6BD2A1BC75F00267F95 /* Courier New.ttf */; };
 		0F9FD6C22A1BC76000267F95 /* Courier New Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0F9FD6BE2A1BC76000267F95 /* Courier New Bold.ttf */; };
-		0F9FD6C32A1BC76000267F95 /* Courier New Bold Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0F9FD6BF2A1BC76000267F95 /* Courier New Bold Italic.ttf */; };
-		0F9FD6C42A1BC76000267F95 /* Courier New Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0F9FD6C02A1BC76000267F95 /* Courier New Italic.ttf */; };
+		0F9FD6C72A1CF55D00267F95 /* SurveryPage2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F9FD6C62A1CF55D00267F95 /* SurveryPage2.swift */; };
+		0F9FD6C92A1CF60A00267F95 /* SurveyPage3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F9FD6C82A1CF60A00267F95 /* SurveyPage3.swift */; };
 		0FF310A32A125DA6006A731A /* SoCoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FF310A22A125DA6006A731A /* SoCoApp.swift */; };
 		0FF310A52A125DA6006A731A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FF310A42A125DA6006A731A /* ContentView.swift */; };
 		0FF310A72A125DA8006A731A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0FF310A62A125DA8006A731A /* Assets.xcassets */; };
@@ -31,8 +31,8 @@
 		0F9FD6BB2A1BB89300267F95 /* SurveyPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyPage.swift; sourceTree = "<group>"; };
 		0F9FD6BD2A1BC75F00267F95 /* Courier New.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Courier New.ttf"; path = "../../../../../System/Library/Fonts/Supplemental/Courier New.ttf"; sourceTree = "<group>"; };
 		0F9FD6BE2A1BC76000267F95 /* Courier New Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Courier New Bold.ttf"; path = "../../../../../System/Library/Fonts/Supplemental/Courier New Bold.ttf"; sourceTree = "<group>"; };
-		0F9FD6BF2A1BC76000267F95 /* Courier New Bold Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Courier New Bold Italic.ttf"; path = "../../../../../System/Library/Fonts/Supplemental/Courier New Bold Italic.ttf"; sourceTree = "<group>"; };
-		0F9FD6C02A1BC76000267F95 /* Courier New Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Courier New Italic.ttf"; path = "../../../../../System/Library/Fonts/Supplemental/Courier New Italic.ttf"; sourceTree = "<group>"; };
+		0F9FD6C62A1CF55D00267F95 /* SurveryPage2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveryPage2.swift; sourceTree = "<group>"; };
+		0F9FD6C82A1CF60A00267F95 /* SurveyPage3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyPage3.swift; sourceTree = "<group>"; };
 		0FF3109F2A125DA6006A731A /* SoCo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SoCo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0FF310A22A125DA6006A731A /* SoCoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoCoApp.swift; sourceTree = "<group>"; };
 		0FF310A42A125DA6006A731A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -58,9 +58,7 @@
 		0FF310962A125DA6006A731A = {
 			isa = PBXGroup;
 			children = (
-				0F9FD6BF2A1BC76000267F95 /* Courier New Bold Italic.ttf */,
 				0F9FD6BE2A1BC76000267F95 /* Courier New Bold.ttf */,
-				0F9FD6C02A1BC76000267F95 /* Courier New Italic.ttf */,
 				0F9FD6BD2A1BC75F00267F95 /* Courier New.ttf */,
 				0FF310A12A125DA6006A731A /* SoCo */,
 				0FF310A02A125DA6006A731A /* Products */,
@@ -83,6 +81,8 @@
 				0F9FD6B72A1BAE6C00267F95 /* FirstPage.swift */,
 				0F9FD6B92A1BB87F00267F95 /* SurveyDisclaimer.swift */,
 				0F9FD6BB2A1BB89300267F95 /* SurveyPage.swift */,
+				0F9FD6C62A1CF55D00267F95 /* SurveryPage2.swift */,
+				0F9FD6C82A1CF60A00267F95 /* SurveyPage3.swift */,
 				0F9FD6B52A17C32300267F95 /* ScenariosM.swift */,
 				0FF310B32A128423006A731A /* JobView.swift */,
 				0FF310B12A12826D006A731A /* PartyView.swift */,
@@ -163,9 +163,7 @@
 				0F9FD6C22A1BC76000267F95 /* Courier New Bold.ttf in Resources */,
 				0FF310AB2A125DA8006A731A /* Preview Assets.xcassets in Resources */,
 				0FF310A72A125DA8006A731A /* Assets.xcassets in Resources */,
-				0F9FD6C32A1BC76000267F95 /* Courier New Bold Italic.ttf in Resources */,
 				0F9FD6C12A1BC76000267F95 /* Courier New.ttf in Resources */,
-				0F9FD6C42A1BC76000267F95 /* Courier New Italic.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -178,6 +176,8 @@
 			files = (
 				0FF310B22A12826D006A731A /* PartyView.swift in Sources */,
 				0FF310A52A125DA6006A731A /* ContentView.swift in Sources */,
+				0F9FD6C72A1CF55D00267F95 /* SurveryPage2.swift in Sources */,
+				0F9FD6C92A1CF60A00267F95 /* SurveyPage3.swift in Sources */,
 				0FF310B42A128423006A731A /* JobView.swift in Sources */,
 				0F9FD6B82A1BAE6C00267F95 /* FirstPage.swift in Sources */,
 				0F9FD6BC2A1BB89300267F95 /* SurveyPage.swift in Sources */,

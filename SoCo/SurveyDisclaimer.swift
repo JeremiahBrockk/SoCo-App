@@ -10,8 +10,11 @@ import SwiftUI
 struct SurveyDisclaimer: View {
     var body: some View {
         ZStack {
+            Color.init("ColorM")
+                .ignoresSafeArea()
             VStack {
                 Text("(Disclaimer) not intended as substitute for medical advice... etc")
+                    .multilineTextAlignment(.center)
                     .border(.black)
                 
                     .font(.custom("Courier New", size:24))
@@ -22,6 +25,7 @@ struct SurveyDisclaimer: View {
                 Button("Continue") {
                     
                 }
+                .tint(.black)
             }
         }
         

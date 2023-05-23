@@ -1,21 +1,20 @@
 //
-//  SurveyPage.swift
+//  SurveryPage2.swift
 //  SoCo
 //
-//  Created by Mr. Brock💰🤟🏾 on 5/22/23.
+//  Created by Mr. Brock💰🤟🏾 on 5/23/23.
 //
 
 import SwiftUI
 
-struct SurveyPage: View {
-    
+struct SurveryPage2: View {
     var body: some View {
         ZStack {
             Color.init("ColorM")
                 .ignoresSafeArea()
-//            background(Color("ColorM"))
+            //            background(Color("ColorM"))
             VStack(alignment: .center) {
-                Text("Which setting do you feel least comfortable in?")
+                Text("What helps you feel comfortable?")
                     .font(.custom("Courier New", size:30))
                     .multilineTextAlignment(.center)
                     .border(.brown)
@@ -24,8 +23,8 @@ struct SurveyPage: View {
                 Text("3 ⭐️'s most comfortable ")
                     .font(.custom("Courier New", size:14))
                 
-                    //VStack {
-                        Text("Workplace")
+                //VStack {
+                Text("Being Alone")
                     .font(.custom("Courier New", size:24))
                 HStack {Image(systemName: "star")
                         .font(.title)
@@ -36,9 +35,9 @@ struct SurveyPage: View {
                     Image(systemName: "star")
                         .font(.title)
                         .foregroundColor(Color("ColorST"))
-                //    }
+                    //    }
                 }
-            Text("School")
+                Text("Help from a friend")
                     .font(.custom("Courier New", size:24))
                 HStack { Image(systemName: "star")
                         .font(.title)
@@ -49,34 +48,14 @@ struct SurveyPage: View {
                     Image(systemName: "star")
                         .font(.title)
                         .foregroundColor(Color("ColorST"))
-
                 }
-            Text("Social Gathering")
-                    .font(.custom("Courier New", size:24))
-                HStack {   Image(systemName: "star")
-                        .font(.title)
-                        .foregroundColor(Color("ColorST"))
-                                   Image(systemName: "star")
-                        .font(.title)
-                        .foregroundColor(Color("ColorST"))
-                                    Image(systemName: "star")
-                        .font(.title)
-                        .foregroundColor(Color("ColorST"))
-                
-                    }
-                HStack {
-                    Text("Continue")
-                        .font(.custom("Courier New", size:18))
-                }
-                
             }
         }
-//        .background(fil)
     }
 }
 
-struct SurveyPage_Previews: PreviewProvider {
+struct SurveryPage2_Previews: PreviewProvider {
     static var previews: some View {
-        SurveyPage()
+        SurveryPage2()
     }
 }

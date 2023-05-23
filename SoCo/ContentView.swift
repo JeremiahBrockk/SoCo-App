@@ -28,25 +28,37 @@ struct ContentView: View {
                             .foregroundColor(Color("ColorT"))
                             .bold()
                             .font(.largeTitle)
-                        List {
-                            Text("Say Good Morning to Someone")
-                                .fontWeight(.medium)
-                            //   .foregroundColor(Color("ColorM"))
-                                .foregroundColor(Color("ColorT"))
-                                .background(Color("ColorM"))
-                            
-                            Text("Speak in Front of a Group")
-                                .fontWeight(.medium)
-                                .foregroundColor(Color("ColorT"))
-                                .background(Color("ColorM"))
-                            Text("Post a Picture Online")
-                                .fontWeight(.medium)
-                            // .frame(width: geo.size.width * 0.7, height: geo.size.height / 6)
-                                .foregroundColor(Color("ColorT"))
-                                .cornerRadius(15)
-                            
-                                .background(Color("ColorM"))
-                            
+                        Rectangle()
+                            .foregroundColor(Color.init("ColorM"))
+                            .frame(width: 333, height: 176)
+                            .border(.brown)
+
+                            .cornerRadius(15)
+                        VStack {
+                            HStack {
+                                Text("Say Good Morning to Someone")
+                                    .fontWeight(.medium)
+                                //   .foregroundColor(Color("ColorM"))
+                                    .foregroundColor(Color("ColorT"))
+                                
+                            }
+                            //                        Divider()
+                            //                        HStack {
+                            //                            Text("Speak in Front of a Group")
+                            //                                .fontWeight(.medium)
+                            //                                .foregroundColor(Color("ColorT"))
+                            //
+                            //                        }
+                            //                        Divider()
+                            //                        HStack {
+                            //                            Text("Post a Picture Online")
+                            //                                .fontWeight(.medium)
+                            //                            // .frame(width: geo.size.width * 0.7, height: geo.size.height / 6)
+                            //                                .foregroundColor(Color("ColorT"))
+                            //                                .cornerRadius(15)
+                            //
+                            //
+                            //                        }
                         }
                         Text("Scenarios")
                             .font(.largeTitle)
@@ -105,29 +117,39 @@ struct ContentView: View {
             
             if showingModal {
                 Color.black.opacity(0.2)
-                List {
-                    Text("Say Good Morning to Someone")
-                        .fontWeight(.medium)
-                    //   .foregroundColor(Color("ColorM"))
-                        .foregroundColor(Color("ColorT"))
-                        .background(Color("ColorM"))
-                    
-                    Text("Speak in Front of a Group")
-                        .fontWeight(.medium)
-                        .foregroundColor(Color("ColorT"))
-                        .background(Color("ColorM"))
-                    Text("Post a Picture Online")
-                        .fontWeight(.medium)
-                    // .frame(width: geo.size.width * 0.7, height: geo.size.height / 6)
-                        .foregroundColor(Color("ColorT"))
-                        .cornerRadius(15)
-                    
-                        .background(Color("ColorM"))
-               
+                ZStack {
+                    Rectangle()
+                        .foregroundColor(Color.init("ColorM"))
+                        .frame(width: 333, height: 508)
+                    VStack {
+                        Text("Missions")
+                            .foregroundColor(.brown)
+                            .font(.title)
+                        Divider()
+                        HStack {
+                            Text("Say goodmorning to someone")
+                            Image(systemName: "square")
+                        }
+                        Divider()
+                        HStack{
+                            Text("Say goodmorning to someone")
+                            Image(systemName: "square")
+                        }
+                        Divider()
+                        HStack {
+                            Text("Say goodmorning to someone")
+                            Image(systemName: "square")
+                        }
+                        Divider()
+                        HStack {
+                            Text("Say goodmorning to someone")
+                            Image(systemName: "square")
+                        }
                     Image(systemName: "arrow.down.right.and.arrow.up.left")
                     .onTapGesture {
                         withAnimation {
                             showingModal = false
+                        }
                         }
                         }
                     }
