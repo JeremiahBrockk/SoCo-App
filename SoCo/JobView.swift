@@ -11,10 +11,13 @@ struct JobView: View {
     var body: some View {
         VStack {
             Text("Job Scenario")
+                .font(.custom("AppleGothic", size:30))
+                .fontWeight(.medium)
                 .foregroundColor(Color("ColorT"))
             Spacer()
             
             Text("You have been working at XYZ Corporation for three years and built a good relationship with your boss, John. However, you recently discovered some unethical practices within the marketing department that must be addressed")
+                .font(.custom("AvenirNextCondensed", size:21))
                 .foregroundColor(Color("ColorT"))
               //   .frame(width: 334, height: 170)
                 .multilineTextAlignment(.center)
@@ -25,6 +28,7 @@ struct JobView: View {
              Spacer()
              NavigationLink(destination: Answer1()) {
                  Text("Address the concerns directly")
+                     .font(.custom("AvenirNextCondensed", size:24))
                      .background(Color("ColorM"))
                      .fontWeight(.medium)
                     // .frame(width: 330 , height: 35)
@@ -32,12 +36,14 @@ struct JobView: View {
                      
              }
              Text("Seek guidance from a trusted peer")
+                .font(.custom("AvenirNextCondensed", size:24))
                  .background(Color("ColorM"))
                  .fontWeight(.medium)
           //   .frame(width: 330 , height: 35)
              .cornerRadius(15)
              .padding()
              Text("Report the concerns")
+                .font(.custom("AvenirNextCondensed", size:24))
                  .background(Color("ColorM"))
                  .fontWeight(.medium)
             // .frame(width: 330 , height: 35)

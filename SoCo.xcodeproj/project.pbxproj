@@ -22,6 +22,7 @@
 		0FF310B22A12826D006A731A /* PartyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FF310B12A12826D006A731A /* PartyView.swift */; };
 		0FF310B42A128423006A731A /* JobView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FF310B32A128423006A731A /* JobView.swift */; };
 		0FF310B62A12876D006A731A /* Answer1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FF310B52A12876D006A731A /* Answer1.swift */; };
+		0FF9766D2A1FAF7800BB5F6C /* ScenariosVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FF9766C2A1FAF7800BB5F6C /* ScenariosVM.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +34,8 @@
 		0F9FD6BE2A1BC76000267F95 /* Courier New Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Courier New Bold.ttf"; path = "../../../../../System/Library/Fonts/Supplemental/Courier New Bold.ttf"; sourceTree = "<group>"; };
 		0F9FD6C62A1CF55D00267F95 /* SurveryPage2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveryPage2.swift; sourceTree = "<group>"; };
 		0F9FD6C82A1CF60A00267F95 /* SurveyPage3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyPage3.swift; sourceTree = "<group>"; };
+		0F9FD6CC2A1E499300267F95 /* Avenir Next Condensed.ttc */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Avenir Next Condensed.ttc"; path = "../../../../../System/Library/Fonts/Avenir Next Condensed.ttc"; sourceTree = "<group>"; };
+		0F9FD6CD2A1E4C2700267F95 /* AppleGothic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = AppleGothic.ttf; path = "../../../Library/Messages/Attachments/c8/08/7A456D6C-DF0B-46CB-8D46-C45DE8C6636F/AppleGothic.ttf"; sourceTree = "<group>"; };
 		0FF3109F2A125DA6006A731A /* SoCo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SoCo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0FF310A22A125DA6006A731A /* SoCoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoCoApp.swift; sourceTree = "<group>"; };
 		0FF310A42A125DA6006A731A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -42,6 +45,7 @@
 		0FF310B12A12826D006A731A /* PartyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartyView.swift; sourceTree = "<group>"; };
 		0FF310B32A128423006A731A /* JobView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobView.swift; sourceTree = "<group>"; };
 		0FF310B52A12876D006A731A /* Answer1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Answer1.swift; sourceTree = "<group>"; };
+		0FF9766C2A1FAF7800BB5F6C /* ScenariosVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScenariosVM.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +64,8 @@
 			children = (
 				0F9FD6BE2A1BC76000267F95 /* Courier New Bold.ttf */,
 				0F9FD6BD2A1BC75F00267F95 /* Courier New.ttf */,
+				0F9FD6CC2A1E499300267F95 /* Avenir Next Condensed.ttc */,
+				0F9FD6CD2A1E4C2700267F95 /* AppleGothic.ttf */,
 				0FF310A12A125DA6006A731A /* SoCo */,
 				0FF310A02A125DA6006A731A /* Products */,
 			);
@@ -84,6 +90,7 @@
 				0F9FD6C62A1CF55D00267F95 /* SurveryPage2.swift */,
 				0F9FD6C82A1CF60A00267F95 /* SurveyPage3.swift */,
 				0F9FD6B52A17C32300267F95 /* ScenariosM.swift */,
+				0FF9766C2A1FAF7800BB5F6C /* ScenariosVM.swift */,
 				0FF310B32A128423006A731A /* JobView.swift */,
 				0FF310B12A12826D006A731A /* PartyView.swift */,
 				0FF310B52A12876D006A731A /* Answer1.swift */,
@@ -180,6 +187,7 @@
 				0F9FD6C92A1CF60A00267F95 /* SurveyPage3.swift in Sources */,
 				0FF310B42A128423006A731A /* JobView.swift in Sources */,
 				0F9FD6B82A1BAE6C00267F95 /* FirstPage.swift in Sources */,
+				0FF9766D2A1FAF7800BB5F6C /* ScenariosVM.swift in Sources */,
 				0F9FD6BC2A1BB89300267F95 /* SurveyPage.swift in Sources */,
 				0F9FD6BA2A1BB87F00267F95 /* SurveyDisclaimer.swift in Sources */,
 				0F9FD6B62A17C32300267F95 /* ScenariosM.swift in Sources */,
