@@ -14,31 +14,17 @@ struct SurveryPage2: View {
                 .ignoresSafeArea()
             //            background(Color("ColorM"))
             VStack(alignment: .center) {
-                Text("What helps you feel comfortable?")
-                    .font(.custom("Courier New", size:30))
+                Text("Please rate your current comfort level in each of these different environments")
+                    .foregroundColor(Color("ColorT"))
+                    .bold()
+                    .font(.custom("Courier New", size:18))
                     .multilineTextAlignment(.center)
                     .border(.brown)
                     .font(.title)
-                
-                Text("3 ⭐️'s most comfortable ")
-                    .font(.custom("Courier New", size:14))
-                
-                //VStack {
+                Spacer()
                 Text("Being Alone")
                     .font(.custom("Courier New", size:24))
-                HStack {Image(systemName: "star")
-                        .font(.title)
-                        .foregroundColor(Color("ColorST"))
-                    Image(systemName: "star")
-                        .font(.title)
-                        .foregroundColor(Color("ColorST"))
-                    Image(systemName: "star")
-                        .font(.title)
-                        .foregroundColor(Color("ColorST"))
-                    //    }
-                }
-                Text("Help from a friend")
-                    .font(.custom("Courier New", size:24))
+                Spacer()
                 HStack { Image(systemName: "star")
                         .font(.title)
                         .foregroundColor(Color("ColorST"))
@@ -48,7 +34,22 @@ struct SurveryPage2: View {
                     Image(systemName: "star")
                         .font(.title)
                         .foregroundColor(Color("ColorST"))
+                    Image(systemName: "star")
+                        .font(.title)
+                        .foregroundColor(Color("ColorST"))
+                    Image(systemName: "star")
+                        .font(.title)
+                        .foregroundColor(Color("ColorST"))
+                    
                 }
+                Spacer()
+                
+                HStack {
+                    Text("Continue")
+                        .font(.custom("Courier New", size:18))
+                        .fontWeight(.bold)
+                }
+                Spacer()
             }
         }
     }

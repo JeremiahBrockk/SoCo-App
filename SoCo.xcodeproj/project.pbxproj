@@ -15,6 +15,8 @@
 		0F9FD6C22A1BC76000267F95 /* Courier New Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0F9FD6BE2A1BC76000267F95 /* Courier New Bold.ttf */; };
 		0F9FD6C72A1CF55D00267F95 /* SurveryPage2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F9FD6C62A1CF55D00267F95 /* SurveryPage2.swift */; };
 		0F9FD6C92A1CF60A00267F95 /* SurveyPage3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F9FD6C82A1CF60A00267F95 /* SurveyPage3.swift */; };
+		0FE870992A27940F00A45C39 /* SurveyM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FE870982A27940F00A45C39 /* SurveyM.swift */; };
+		0FE8709B2A27942000A45C39 /* SurveyVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FE8709A2A27942000A45C39 /* SurveyVM.swift */; };
 		0FF310A32A125DA6006A731A /* SoCoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FF310A22A125DA6006A731A /* SoCoApp.swift */; };
 		0FF310A52A125DA6006A731A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FF310A42A125DA6006A731A /* ContentView.swift */; };
 		0FF310A72A125DA8006A731A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0FF310A62A125DA8006A731A /* Assets.xcassets */; };
@@ -36,6 +38,8 @@
 		0F9FD6C82A1CF60A00267F95 /* SurveyPage3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyPage3.swift; sourceTree = "<group>"; };
 		0F9FD6CC2A1E499300267F95 /* Avenir Next Condensed.ttc */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Avenir Next Condensed.ttc"; path = "../../../../../System/Library/Fonts/Avenir Next Condensed.ttc"; sourceTree = "<group>"; };
 		0F9FD6CD2A1E4C2700267F95 /* AppleGothic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = AppleGothic.ttf; path = "../../../Library/Messages/Attachments/c8/08/7A456D6C-DF0B-46CB-8D46-C45DE8C6636F/AppleGothic.ttf"; sourceTree = "<group>"; };
+		0FE870982A27940F00A45C39 /* SurveyM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyM.swift; sourceTree = "<group>"; };
+		0FE8709A2A27942000A45C39 /* SurveyVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyVM.swift; sourceTree = "<group>"; };
 		0FF3109F2A125DA6006A731A /* SoCo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SoCo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0FF310A22A125DA6006A731A /* SoCoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoCoApp.swift; sourceTree = "<group>"; };
 		0FF310A42A125DA6006A731A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -89,6 +93,8 @@
 				0F9FD6BB2A1BB89300267F95 /* SurveyPage.swift */,
 				0F9FD6C62A1CF55D00267F95 /* SurveryPage2.swift */,
 				0F9FD6C82A1CF60A00267F95 /* SurveyPage3.swift */,
+				0FE870982A27940F00A45C39 /* SurveyM.swift */,
+				0FE8709A2A27942000A45C39 /* SurveyVM.swift */,
 				0F9FD6B52A17C32300267F95 /* ScenariosM.swift */,
 				0FF9766C2A1FAF7800BB5F6C /* ScenariosVM.swift */,
 				0FF310B32A128423006A731A /* JobView.swift */,
@@ -183,11 +189,13 @@
 			files = (
 				0FF310B22A12826D006A731A /* PartyView.swift in Sources */,
 				0FF310A52A125DA6006A731A /* ContentView.swift in Sources */,
+				0FE8709B2A27942000A45C39 /* SurveyVM.swift in Sources */,
 				0F9FD6C72A1CF55D00267F95 /* SurveryPage2.swift in Sources */,
 				0F9FD6C92A1CF60A00267F95 /* SurveyPage3.swift in Sources */,
 				0FF310B42A128423006A731A /* JobView.swift in Sources */,
 				0F9FD6B82A1BAE6C00267F95 /* FirstPage.swift in Sources */,
 				0FF9766D2A1FAF7800BB5F6C /* ScenariosVM.swift in Sources */,
+				0FE870992A27940F00A45C39 /* SurveyM.swift in Sources */,
 				0F9FD6BC2A1BB89300267F95 /* SurveyPage.swift in Sources */,
 				0F9FD6BA2A1BB87F00267F95 /* SurveyDisclaimer.swift in Sources */,
 				0F9FD6B62A17C32300267F95 /* ScenariosM.swift in Sources */,
@@ -335,7 +343,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 13.3;
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 0.1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = Project.SoCo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
@@ -373,7 +381,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 13.3;
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 0.1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = Project.SoCo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;

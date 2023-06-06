@@ -13,33 +13,19 @@ struct SurveyPage: View {
         ZStack {
             Color.init("ColorM")
                 .ignoresSafeArea()
-//            background(Color("ColorM"))
+            //            background(Color("ColorM"))
             VStack(alignment: .center) {
-                Text("Which setting do you feel least comfortable in?")
-                    .font(.custom("Courier New", size:30))
+                Text("Please rate your current comfort level in each of these different environments")
+                    .foregroundColor(Color("ColorT"))
+                    .bold()
+                    .font(.custom("Courier New", size:18))
                     .multilineTextAlignment(.center)
                     .border(.brown)
                     .font(.title)
-                
-                Text("3 ⭐️'s most comfortable ")
-                    .font(.custom("Courier New", size:14))
-                
-                    //VStack {
-                        Text("Workplace")
+                Spacer()
+                Text("School")
                     .font(.custom("Courier New", size:24))
-                HStack {Image(systemName: "star")
-                        .font(.title)
-                        .foregroundColor(Color("ColorST"))
-                    Image(systemName: "star")
-                        .font(.title)
-                        .foregroundColor(Color("ColorST"))
-                    Image(systemName: "star")
-                        .font(.title)
-                        .foregroundColor(Color("ColorST"))
-                //    }
-                }
-            Text("School")
-                    .font(.custom("Courier New", size:24))
+                    //     Spacer()
                 HStack { Image(systemName: "star")
                         .font(.title)
                         .foregroundColor(Color("ColorST"))
@@ -49,29 +35,25 @@ struct SurveyPage: View {
                     Image(systemName: "star")
                         .font(.title)
                         .foregroundColor(Color("ColorST"))
-
+                    Image(systemName: "star")
+                        .font(.title)
+                        .foregroundColor(Color("ColorST"))
+                    Image(systemName: "star")
+                        .font(.title)
+                        .foregroundColor(Color("ColorST"))
+                    
                 }
-            Text("Social Gathering")
-                    .font(.custom("Courier New", size:24))
-                HStack {   Image(systemName: "star")
-                        .font(.title)
-                        .foregroundColor(Color("ColorST"))
-                                   Image(systemName: "star")
-                        .font(.title)
-                        .foregroundColor(Color("ColorST"))
-                                    Image(systemName: "star")
-                        .font(.title)
-                        .foregroundColor(Color("ColorST"))
+                Spacer()
                 
-                    }
                 HStack {
                     Text("Continue")
                         .font(.custom("Courier New", size:18))
+                        .fontWeight(.bold)
                 }
-                
+                Spacer()
             }
         }
-//        .background(fil)
+        
     }
 }
 

@@ -43,25 +43,28 @@ struct Answer1: View {
                 .cornerRadius(15)
             Spacer()
             HStack {
-                
-                Text("Try Again")
-                    .font(.custom("AvenirNextCondensed", size:36))
-                    .fontWeight(.bold)
-                    .background(Color("ColorM"))
-                
-                //    .frame(width: 150 , height: 63)
-                //  .padding()
-                    .foregroundColor(Color("ColorT"))
-                    .cornerRadius(15)
-                    .font(.largeTitle)
-                Text("Continue")
-                    .font(.custom("AvenirNextCondensed", size:36))
-                    .fontWeight(.bold)
-                    .background(Color("ColorM"))
-                // .frame(width: 150 , height: 63)
-                    .foregroundColor(Color("ColorT"))
-                    .cornerRadius(15)
-                    .font(.largeTitle)
+                NavigationLink(destination:PartyView()) {
+                    Text("Try Again")
+                        .font(.custom("AvenirNextCondensed", size:36))
+                        .fontWeight(.bold)
+                        .background(Color("ColorM"))
+                    
+                    //    .frame(width: 150 , height: 63)
+                    //  .padding()
+                        .foregroundColor(Color("ColorT"))
+                        .cornerRadius(15)
+                        .font(.largeTitle)
+                }
+                NavigationLink( destination: ContentView()) {
+                    Text("Continue")
+                        .font(.custom("AvenirNextCondensed", size:36))
+                        .fontWeight(.bold)
+                        .background(Color("ColorM"))
+                    // .frame(width: 150 , height: 63)
+                        .foregroundColor(Color("ColorT"))
+                        .cornerRadius(15)
+                        .font(.largeTitle)
+                }
             }
             
         }

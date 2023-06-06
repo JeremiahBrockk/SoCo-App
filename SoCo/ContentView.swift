@@ -7,8 +7,65 @@
 
 import SwiftUI
 
-struct ContentView: View {
+//struct CheckBox: View {
+//    @State var isChecked = false
+//    let images = ["checkmark.square", "square"]
+//    @State var selectedImage = ""
+//
+//    var body: some View {
+//        ForEach(images, id: \.self) { image in
+//            CheckedBoxView(selectedImage: $selectedImage, imageName: image)
+//        }
+//    }
+//}
+//struct CheckedBoxView: View {
+//    @State var isChecked = false
+//    @Binding var selectedImage: String
+//    var imageName: String
+//
+//    var body: some View {
+//        Button {
+//            isChecked = true
+//            selectedImage = imageName
+//        } label: {
+//            Image(systemName: imageName)
+//        }
+//        .onChange(of: selectedImage) { newValue in
+//            if newValue != imageName {
+//                isChecked = false
+//            }
+//
+//        }
+//    }
+//
+//}
+
+struct CheckBox: View {
+    @State var isChecked = false
     
+    var imageName: String {
+        isChecked ? "checkmark.square" : "square"
+    }
+
+    var body: some View {
+        Button {
+            isChecked.toggle()
+        } label: {
+            Image(systemName: imageName)
+        }
+    }
+
+}
+
+struct Task: Identifiable {
+    let id = UUID()
+    var isCompleted: Bool
+    
+}
+
+struct ContentView: View {
+   // @State private var tasks = Task(isCompleted: false)
+    @State private var isChecked = false
     @State private var showingModal = false
     
     var body: some View {
@@ -22,33 +79,23 @@ struct ContentView: View {
                             .resizable()
                             .scaledToFit()
                             .frame(width: geo.size.width * 0.4)
-                        
-                        
                         ScrollView {
-                            
                             Text("Daily Mission")
-                            
-                            //   .foregroundColor(Color(red: 1.0, green: 0.0, blue: 0.0))
                                 .foregroundColor(Color("ColorT"))
                                 .bold()
                                 .font(.custom("AppleGothic", size:30))
                                 .padding()
-                            //                            Rectangle()
-                            //                                .foregroundColor(Color.init("ColorM"))
-                            //                                .frame(width: 333, height: 176)
-                            //                                .border(.brown)
-                            //                                .cornerRadius(15)
+                            
                             VStack {
                                 HStack {
                                     VStack {
                                         Text("Say Good Morning to Someone")
-                                        
                                             .font(.custom("AvenirNextCondensed", size:20))
                                             .foregroundColor(Color("ColorT"))
                                             .fontWeight(.medium)
                                             .multilineTextAlignment(.leading)
                                         
-                                       Divider()
+                                        Divider()
                                         Text("Speak in Front of a Group")
                                             .font(.custom("AvenirNextCondensed", size:20))
                                             .foregroundColor(Color("ColorT"))
@@ -61,51 +108,28 @@ struct ContentView: View {
                                             .fontWeight(.medium)
                                             .multilineTextAlignment(.leading)
                                         
-                                      //  .foregroundColor(Color("ColorT"))
-                                        
                                         HStack {
                                             Spacer()
                                             Image(systemName: "arrow.up.left.and.arrow.down.right")
                                                 .foregroundColor(Color("ColorT"))
                                                 .onTapGesture {
-                                                    
-                                                    
                                                     withAnimation {
                                                         showingModal = true
                                                         
                                                     }
-                                            }
+                                                }
                                         }
                                     }
                                     .background(
                                         Rectangle()
                                             .foregroundColor(Color.init("ColorM"))
-                                            .frame(width: 333, height: 120)
+                                            .frame(width: 340, height: 120)
                                             .border(.brown)
                                             .cornerRadius(15)
                                     )
-                                
-                                    
                                 }
                                 .frame(width: 333, height: 120)
                                 
-                                
-                                //                        HStack {
-                                //                            Text("Speak in Front of a Group")
-                                //                                .fontWeight(.medium)
-                                //                                .foregroundColor(Color("ColorT"))
-                                //
-                                //                        }
-                                //                        Divider()
-                                //                        HStack {
-                                //                            Text("Post a Picture Online")
-                                //                                .fontWeight(.medium)
-                                //                            // .frame(width: geo.size.width * 0.7, height: geo.size.height / 6)
-                                //                                .foregroundColor(Color("ColorT"))
-                                //                                .cornerRadius(15)
-                                //
-                                //
-                                //                        }
                             }
                             Text("Scenarios")
                                 .font(.custom("AppleGothic", size:30))
@@ -156,73 +180,116 @@ struct ContentView: View {
                             
                         }.frame(maxWidth: .infinity)
                         
-                       
+                        
                     }
                     
                     
- 
+                    
                 }
-            .blur(radius: showingModal ? 2.0 : 0)
-            
-            if showingModal {
-                Color.black.opacity(0.2)
-                ZStack {
-                    Rectangle()
-                        .foregroundColor(Color.init("ColorM"))
-                        .frame(width: 333, height: 508)
-                    VStack {
-                        Text("Missions")
-                            .foregroundColor(.brown)
-                            .font(.title)
-                        Divider()
-                        HStack {
-                            Text("Say goodmorning to someone")
-                            Image(systemName: "square")
-                        }
-                        Divider()
-                        HStack{
-                            Text("Speak in front of a group")
-                            Image(systemName: "square")
-                        }
-                        Divider()
-                        HStack {
-                            Text("Post a picture online")
-                            Image(systemName: "square")
-                        }
-                        Divider()
-                        HStack {
-                            Text("Talk to someone new")
-                            Image(systemName: "square")
-                        }
-//                        HStack {
-//                            Text("Talk to someone new")
-//                            Image(systemName: "square")
-//                        }
-//Divider()
-//                        HStack{
-//                            Text("Talk to someone new")
-//                            Image(systemName: "square")
-//                        }
-                        Image(systemName: "arrow.down.right.and.arrow.up.left")
-                            .onTapGesture {
-                                withAnimation {
-                                    showingModal = false
+                .blur(radius: showingModal ? 2.0 : 0)
+                
+                if showingModal {
+                    Color.black.opacity(0.2)
+                    ZStack {
+                        Rectangle()
+                            .foregroundColor(Color.init("ColorM"))
+                            .frame(width: geo.size.width * 0.7, height: geo.size.height * 3.0 / 6)
+                            .cornerRadius(15)
+                        VStack {
+                            HStack {
+                                
+                                Image(systemName: "arrow.down.right.and.arrow.up.left")
+                                
+                                //    .frame(width: geo.size.width * 0.1)
+                                //   Spacer()
+                                //      .padding(.trailing)
+                                
+                                    .onTapGesture {
+                                        withAnimation {
+                                            showingModal = false
+                                            
+                                        }
+                                        
+                                    }
+                                //  Spacer()
+                            }
+                            Text("Missions")
+                            
+                                .font(.title)
+                                .foregroundColor(Color("ColorT"))
+                            Divider()
+                            Group {
+                                HStack {
+                                    Text("Say goodmorning to someone")
+                                    CheckBox()
+                                  //  Image(systemName: "square")
+//                                                               Image(systemName: isChecked ? "checkmark.square" : "square")
+//                                                                    .onTapGesture {
+//                                                                       isChecked.toggle()
+//                                     isChecked = true
+//                                                                   }
+//
+                                    
+                                }
+                                
+                                Divider()
+                                HStack{
+                                    Text("Speak in front of a group")
+                                    CheckBox()
+                                    //Image(systemName: "square")
+                                }
+                                Divider()
+                                HStack {
+                                    Text("Post a picture online")
+                                    CheckBox()
+                                   // Image(systemName: "square")
+                                }
+                                Divider()
+                                HStack {
+                                    Text("Talk to someone new")
+                                    CheckBox()
+                                 //   Image(systemName: "square")
+                                    
+                                    
                                 }
                             }
-                    }
-                }
-                
-            }
-        }
+                            Group {
+                                Divider()
+                                HStack {
+                                    Text("Share an opinion or idea")
+                                    CheckBox()
+                                    //Image(systemName: "square")
+                                  
+                                }
+                            }
+                            Divider()
+                            HStack {
+                                Text("Engage in positive self-talk")
+                                CheckBox()
+                               // Image(systemName: "square")
+                                
+                            }
+                            Divider()
+                            HStack {
+                                Text("Attend a social event")
+                                CheckBox()
+                                //Image(systemName: "square")
         
+                            }
+                        }
+                    }
+                    
+                }
+            }
+            
+        }
     }
-}
-
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
-        ContentView()
-            .previewDevice("iPad (10th generation)")
+    
+    struct ContentView_Previews: PreviewProvider {
+        static var previews: some View {
+            ContentView()
+            ContentView()
+                .previewDevice("iPad (10th generation)")
+        }
     }
-}
 }

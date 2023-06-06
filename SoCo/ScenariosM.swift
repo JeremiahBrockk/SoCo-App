@@ -10,33 +10,41 @@ import Foundation
 //Where the scenarios and feedback will be pulled 
 
 struct JobScenarios: Identifiable {
-    var id = UUID()
-    var scenario: String
-    var option1: String
-    var option2: String
-    var option3: String
-    var pros: String
-   
-    var cons: String
-  
-    
-    var image: String
-    
+    let id = UUID()
+    let scenarioJ: String
+    // TODO: make a struct for options
+    var options: [Option]
     
 }
+struct Option: Identifiable {
+    let id = UUID()
+    var choices: [String]
+    var pros: String
+    var cons: String
+}
+
+struct Scenario: Identifiable {
+    let id = UUID()
+    let scenario: String
+    var options: [Option]
+}
+
+
+
 struct PartyScenarios: Identifiable {
     var id = UUID()
-    var scenario: String
-    var option1: String
-    var option2: String
-    var option3: String
-    var pros: String
-   
-    
-    var cons: String
+    var scenarioP: String
+    var options: [Option]
     
     
-    var image: String
+    
+    
     
     
 }
+//let JobScenarios: [Scenarios]
+//let PartyScenarios: [Scenarios]
+//@published var selectedScenario: Scenario
+
+//func NextScenario {
+//code the logic for updating selected scenario

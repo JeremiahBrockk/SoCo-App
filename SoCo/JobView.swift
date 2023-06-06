@@ -15,7 +15,11 @@ struct JobView: View {
                 .fontWeight(.medium)
                 .foregroundColor(Color("ColorT"))
             Spacer()
-            
+            Image("Job1")
+                .resizable()
+                .scaledToFit()
+                .padding()
+
             Text("You have been working at XYZ Corporation for three years and built a good relationship with your boss, John. However, you recently discovered some unethical practices within the marketing department that must be addressed")
                 .font(.custom("AvenirNextCondensed", size:21))
                 .foregroundColor(Color("ColorT"))

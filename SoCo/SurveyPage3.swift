@@ -14,18 +14,18 @@ struct SurveyPage3: View {
                 .ignoresSafeArea()
             //            background(Color("ColorM"))
             VStack(alignment: .center) {
-                Text("How uncomfortable are you in social situations?")
-                    .font(.custom("Courier New", size:30))
+                Text("Please rate your current comfort level in each of these different environments")
+                    .foregroundColor(Color("ColorT"))
+                    .bold()
+                    .font(.custom("Courier New", size:18))
                     .multilineTextAlignment(.center)
                     .border(.brown)
                     .font(.title)
-                
-                Text("3 ⭐️'s most comfortable ")
-                    .font(.custom("Courier New", size:14))
-                
-                //VStack {
-               
-                HStack {Image(systemName: "star")
+                Spacer()
+                Text("Trying something new")
+                    .font(.custom("Courier New", size:24))
+                Spacer()
+                HStack { Image(systemName: "star")
                         .font(.title)
                         .foregroundColor(Color("ColorST"))
                     Image(systemName: "star")
@@ -34,9 +34,22 @@ struct SurveyPage3: View {
                     Image(systemName: "star")
                         .font(.title)
                         .foregroundColor(Color("ColorST"))
-                    //    }
+                    Image(systemName: "star")
+                        .font(.title)
+                        .foregroundColor(Color("ColorST"))
+                    Image(systemName: "star")
+                        .font(.title)
+                        .foregroundColor(Color("ColorST"))
+                    
                 }
-             
+                Spacer()
+                
+                HStack {
+                    Text("Continue")
+                        .font(.custom("Courier New", size:18))
+                        .fontWeight(.bold)
+                }
+                Spacer()
             }
         }
     }
