@@ -7,42 +7,8 @@
 
 import SwiftUI
 
-//struct CheckBox: View {
-//    @State var isChecked = false
-//    let images = ["checkmark.square", "square"]
-//    @State var selectedImage = ""
-//
-//    var body: some View {
-//        ForEach(images, id: \.self) { image in
-//            CheckedBoxView(selectedImage: $selectedImage, imageName: image)
-//        }
-//    }
-//}
-//struct CheckedBoxView: View {
-//    @State var isChecked = false
-//    @Binding var selectedImage: String
-//    var imageName: String
-//
-//    var body: some View {
-//        Button {
-//            isChecked = true
-//            selectedImage = imageName
-//        } label: {
-//            Image(systemName: imageName)
-//        }
-//        .onChange(of: selectedImage) { newValue in
-//            if newValue != imageName {
-//                isChecked = false
-//            }
-//
-//        }
-//    }
-//
-//}
-
 struct CheckBox: View {
     @State var isChecked = false
-    
     var imageName: String {
         isChecked ? "checkmark.square" : "square"
     }
@@ -57,14 +23,7 @@ struct CheckBox: View {
 
 }
 
-struct Task: Identifiable {
-    let id = UUID()
-    var isCompleted: Bool
-    
-}
-
 struct ContentView: View {
-   // @State private var tasks = Task(isCompleted: false)
     @State private var isChecked = false
     @State private var showingModal = false
     
@@ -222,35 +181,21 @@ struct ContentView: View {
                                 HStack {
                                     Text("Say goodmorning to someone")
                                     CheckBox()
-                                  //  Image(systemName: "square")
-//                                                               Image(systemName: isChecked ? "checkmark.square" : "square")
-//                                                                    .onTapGesture {
-//                                                                       isChecked.toggle()
-//                                     isChecked = true
-//                                                                   }
-//
-                                    
                                 }
-                                
                                 Divider()
                                 HStack{
                                     Text("Speak in front of a group")
                                     CheckBox()
-                                    //Image(systemName: "square")
                                 }
                                 Divider()
                                 HStack {
                                     Text("Post a picture online")
                                     CheckBox()
-                                   // Image(systemName: "square")
                                 }
                                 Divider()
                                 HStack {
                                     Text("Talk to someone new")
                                     CheckBox()
-                                 //   Image(systemName: "square")
-                                    
-                                    
                                 }
                             }
                             Group {
@@ -258,23 +203,17 @@ struct ContentView: View {
                                 HStack {
                                     Text("Share an opinion or idea")
                                     CheckBox()
-                                    //Image(systemName: "square")
-                                  
                                 }
                             }
                             Divider()
                             HStack {
                                 Text("Engage in positive self-talk")
                                 CheckBox()
-                               // Image(systemName: "square")
-                                
                             }
                             Divider()
                             HStack {
                                 Text("Attend a social event")
                                 CheckBox()
-                                //Image(systemName: "square")
-        
                             }
                         }
                     }

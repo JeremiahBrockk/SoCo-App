@@ -13,17 +13,20 @@ struct SurveyDisclaimer: View {
             Color.init("ColorM")
                 .ignoresSafeArea()
             VStack {
-                Text("(Disclaimer) not intended as substitute for medical advice... etc")
-                    .multilineTextAlignment(.center)
-                    .border(.black)
+               
+                    
+                    Text("(Disclaimer) not intended as substitute for medical advice... etc")
+                        .multilineTextAlignment(.center)
+                        .border(.black)
+                    
+                        .font(.custom("Courier New", size:24))
                 
-                    .font(.custom("Courier New", size:24))
-                Text("privacy policy")
-                    .font(.custom("Courier New", size:14))
+                    Text("privacy policy")
+                        .font(.custom("Courier New", size:14))
                 
-                Text("I understand and wish to continue")
-                
-                    .font(.custom("Courier New", size:14))
+                    Text("I understand and wish to continue")
+                    
+                        .font(.custom("Courier New", size:14))
                 
                 Button("Continue") {
                     

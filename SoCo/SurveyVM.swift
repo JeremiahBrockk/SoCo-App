@@ -7,20 +7,20 @@
 
 import Foundation
 
-//class SurveyViewModel: ObservableObject {
-//   @Published var environment: [SurveyQuestions] = [
-//
-//    SurveyQuestions(message: "Please rate your current comfort level in each of these different envitronments", environments: "School", marking: ),
-//        SurveyQuestions(message: "Please rate your current comfort level in each of these different envitronments", environments: "Being Alone", marking: String, score: <#T##Int#>),
-//        SurveyQuestions(message: "Please rate your current comfort level in each of these different envitronments", environments: "Trying something new", marking: String, score: <#T##Int#>),
-//    SurveyQuestions(message: "Please rate your current comfort level in each of these different envitronments", environments: "Working", marking: String, score: <#T##Int#>),
-//        SurveyQuestions(message: "Please rate your current comfort level in each of these different envitronments", environments: "Speaking to others", marking: String, score: <#T##Int#>),
-//        SurveyQuestions(message: "Please rate your current comfort level in each of these different envitronments", environments: "Speaking up", marking: String, score: <#T##Int#>),
-//        SurveyQuestions(message: "Please rate your current comfort level in each of these different envitronments", environments: "Social Gatherings", marking: String, score: <#T##Int#>)
-//
-//
-//    ]
-//}
+class SurveyViewModel: ObservableObject {
+   @Published var questions: [SurveyQuestions] = [
+
+    SurveyQuestions(message: "Please rate your current comfort level in each of these different envitronments", environments: "School"),
+        SurveyQuestions(message: "Please rate your current comfort level in each of these different envitronments", environments: "Being Alone"),
+        SurveyQuestions(message: "Please rate your current comfort level in each of these different envitronments", environments: "Trying something new"),
+    SurveyQuestions(message: "Please rate your current comfort level in each of these different envitronments", environments: "Working"),
+        SurveyQuestions(message: "Please rate your current comfort level in each of these different envitronments", environments: "Speaking to others"),
+        SurveyQuestions(message: "Please rate your current comfort level in each of these different envitronments", environments: "Speaking up"),
+        SurveyQuestions(message: "Please rate your current comfort level in each of these different envitronments", environments: "Social Gatherings")
+
+
+    ]
+}
 
 //func submitSurvey() {
 //    for environment in environments {

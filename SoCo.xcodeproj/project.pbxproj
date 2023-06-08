@@ -9,12 +9,9 @@
 /* Begin PBXBuildFile section */
 		0F9FD6B62A17C32300267F95 /* ScenariosM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F9FD6B52A17C32300267F95 /* ScenariosM.swift */; };
 		0F9FD6B82A1BAE6C00267F95 /* FirstPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F9FD6B72A1BAE6C00267F95 /* FirstPage.swift */; };
-		0F9FD6BA2A1BB87F00267F95 /* SurveyDisclaimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F9FD6B92A1BB87F00267F95 /* SurveyDisclaimer.swift */; };
 		0F9FD6BC2A1BB89300267F95 /* SurveyPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F9FD6BB2A1BB89300267F95 /* SurveyPage.swift */; };
 		0F9FD6C12A1BC76000267F95 /* Courier New.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0F9FD6BD2A1BC75F00267F95 /* Courier New.ttf */; };
 		0F9FD6C22A1BC76000267F95 /* Courier New Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0F9FD6BE2A1BC76000267F95 /* Courier New Bold.ttf */; };
-		0F9FD6C72A1CF55D00267F95 /* SurveryPage2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F9FD6C62A1CF55D00267F95 /* SurveryPage2.swift */; };
-		0F9FD6C92A1CF60A00267F95 /* SurveyPage3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F9FD6C82A1CF60A00267F95 /* SurveyPage3.swift */; };
 		0FE870992A27940F00A45C39 /* SurveyM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FE870982A27940F00A45C39 /* SurveyM.swift */; };
 		0FE8709B2A27942000A45C39 /* SurveyVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FE8709A2A27942000A45C39 /* SurveyVM.swift */; };
 		0FF310A32A125DA6006A731A /* SoCoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FF310A22A125DA6006A731A /* SoCoApp.swift */; };
@@ -30,12 +27,9 @@
 /* Begin PBXFileReference section */
 		0F9FD6B52A17C32300267F95 /* ScenariosM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScenariosM.swift; sourceTree = "<group>"; };
 		0F9FD6B72A1BAE6C00267F95 /* FirstPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstPage.swift; sourceTree = "<group>"; };
-		0F9FD6B92A1BB87F00267F95 /* SurveyDisclaimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyDisclaimer.swift; sourceTree = "<group>"; };
 		0F9FD6BB2A1BB89300267F95 /* SurveyPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyPage.swift; sourceTree = "<group>"; };
 		0F9FD6BD2A1BC75F00267F95 /* Courier New.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Courier New.ttf"; path = "../../../../../System/Library/Fonts/Supplemental/Courier New.ttf"; sourceTree = "<group>"; };
 		0F9FD6BE2A1BC76000267F95 /* Courier New Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Courier New Bold.ttf"; path = "../../../../../System/Library/Fonts/Supplemental/Courier New Bold.ttf"; sourceTree = "<group>"; };
-		0F9FD6C62A1CF55D00267F95 /* SurveryPage2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveryPage2.swift; sourceTree = "<group>"; };
-		0F9FD6C82A1CF60A00267F95 /* SurveyPage3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyPage3.swift; sourceTree = "<group>"; };
 		0F9FD6CC2A1E499300267F95 /* Avenir Next Condensed.ttc */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Avenir Next Condensed.ttc"; path = "../../../../../System/Library/Fonts/Avenir Next Condensed.ttc"; sourceTree = "<group>"; };
 		0F9FD6CD2A1E4C2700267F95 /* AppleGothic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = AppleGothic.ttf; path = "../../../Library/Messages/Attachments/c8/08/7A456D6C-DF0B-46CB-8D46-C45DE8C6636F/AppleGothic.ttf"; sourceTree = "<group>"; };
 		0FE870982A27940F00A45C39 /* SurveyM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyM.swift; sourceTree = "<group>"; };
@@ -89,10 +83,7 @@
 				0FF310A22A125DA6006A731A /* SoCoApp.swift */,
 				0FF310A42A125DA6006A731A /* ContentView.swift */,
 				0F9FD6B72A1BAE6C00267F95 /* FirstPage.swift */,
-				0F9FD6B92A1BB87F00267F95 /* SurveyDisclaimer.swift */,
 				0F9FD6BB2A1BB89300267F95 /* SurveyPage.swift */,
-				0F9FD6C62A1CF55D00267F95 /* SurveryPage2.swift */,
-				0F9FD6C82A1CF60A00267F95 /* SurveyPage3.swift */,
 				0FE870982A27940F00A45C39 /* SurveyM.swift */,
 				0FE8709A2A27942000A45C39 /* SurveyVM.swift */,
 				0F9FD6B52A17C32300267F95 /* ScenariosM.swift */,
@@ -190,14 +181,11 @@
 				0FF310B22A12826D006A731A /* PartyView.swift in Sources */,
 				0FF310A52A125DA6006A731A /* ContentView.swift in Sources */,
 				0FE8709B2A27942000A45C39 /* SurveyVM.swift in Sources */,
-				0F9FD6C72A1CF55D00267F95 /* SurveryPage2.swift in Sources */,
-				0F9FD6C92A1CF60A00267F95 /* SurveyPage3.swift in Sources */,
 				0FF310B42A128423006A731A /* JobView.swift in Sources */,
 				0F9FD6B82A1BAE6C00267F95 /* FirstPage.swift in Sources */,
 				0FF9766D2A1FAF7800BB5F6C /* ScenariosVM.swift in Sources */,
 				0FE870992A27940F00A45C39 /* SurveyM.swift in Sources */,
 				0F9FD6BC2A1BB89300267F95 /* SurveyPage.swift in Sources */,
-				0F9FD6BA2A1BB87F00267F95 /* SurveyDisclaimer.swift in Sources */,
 				0F9FD6B62A17C32300267F95 /* ScenariosM.swift in Sources */,
 				0FF310B62A12876D006A731A /* Answer1.swift in Sources */,
 				0FF310A32A125DA6006A731A /* SoCoApp.swift in Sources */,
