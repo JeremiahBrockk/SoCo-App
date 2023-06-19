@@ -22,8 +22,4 @@ class SurveyViewModel: ObservableObject {
     ]
 }
 
-//func submitSurvey() {
-//    for environment in environments {
-//        if let
-//    }
-//}
+

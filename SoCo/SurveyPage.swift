@@ -10,26 +10,43 @@ import SwiftUI
 struct MarkedBox: View {
     @State var rating: Int
     @Binding var selectedRating: Int
-    //  @State private var isChecked: [Int] = [1, 2, 3, 4, 5]
-    //  @State var score:Int
     
     var body: some View {
         Image(systemName:  rating <= selectedRating ? "star.fill" : "star")
-            .font(.title)
+            .font(.body)
             .foregroundColor(Color("ColorST"))
             .onTapGesture {
                 selectedRating = rating
-                // selectedRating = selectedRating > 0 ? 0 : 1
                 
             }
     }
+    
 }
 
 struct SurveyPage: View {
     @State private var ratings: [Int] = [0, 0, 0, 0, 0]
-    @State private var totalScore = 0
-    @State private var isFormSubmitted = false
-    var total = [MarkedBox]()
+    @Binding var userHasCompletedSurvey: Bool
+    @State var isShowingAlert = false
+    
+    @Environment(\.legibilityWeight) var legibilityWeight
+    
+    var totalScore: Int {
+        ratings.reduce(0, +)
+    }
+    
+    var surveyFont: String {
+        guard let legibilityWeight = legibilityWeight else {
+            return "Courier New"
+        }
+        switch legibilityWeight {
+        case .regular:
+            return "Courier New"
+        case .bold:
+            return "Courier New Bold"
+        @unknown default:
+            return "Courier New"
+        }
+    }
     
     var body: some View {
         ZStack {
@@ -37,19 +54,19 @@ struct SurveyPage: View {
                 .ignoresSafeArea()
             VStack(alignment: .center) {
                 Text("Please rate your current comfort level in each of these different environments")
-                    .foregroundColor(Color("ColorT"))
+                    .foregroundColor(Color("ColorTT"))
                     .bold()
-                    .font(.custom("Courier New", size: 18))
+                    .font(.custom(surveyFont, size: 18, relativeTo: .title))
                     .multilineTextAlignment(.center)
                     .border(.brown)
-                    .font(.title)
                 Spacer()
                 Form {
-                    Section(header: Text("School").font(.custom("Courier New", size: 24))) {
+                    // TODO: make these sections programatically using a foreach loop
+                    Section(header: Text("School").font(.custom(surveyFont, size: 24, relativeTo: .title))) {
+                        
                         HStack {
                             ForEach(1...5, id: \.self) { rating in
                                 MarkedBox(rating: rating, selectedRating: $ratings[0])
-                                // .overlay(Text("\(rating)").foregroundColor(.white))
                                     .onTapGesture {
                                         ratings[0] = rating
                                         calculateTotalScore()
@@ -57,11 +74,10 @@ struct SurveyPage: View {
                             }
                         }
                     }
-                    Section(header: Text("Being Alone").font(.custom("Courier New", size: 24))) {
+                    Section(header: Text("Being Alone").font(.custom(surveyFont, size: 24, relativeTo: .title))) {
                         HStack {
                             ForEach(1...5, id: \.self) { rating in
                                 MarkedBox(rating: rating, selectedRating: $ratings[1])
-                                //   .overlay(Text("\(rating)").foregroundColor(.white))
                                     .onTapGesture {
                                         ratings[1] = rating
                                         calculateTotalScore()
@@ -70,11 +86,10 @@ struct SurveyPage: View {
                             }
                         }
                     }
-                    Section(header: Text("Trying Something New").font(.custom("Courier New", size: 24))) {
+                    Section(header: Text("Trying Something New").font(.custom(surveyFont, size: 24, relativeTo: .title))) {
                         HStack {
                             ForEach(1...5, id: \.self) { rating in
                                 MarkedBox(rating: rating, selectedRating: $ratings[2])
-                                //  .overlay(Text("\(rating)").foregroundColor(.white))
                                     .onTapGesture {
                                         ratings[2] = rating
                                         calculateTotalScore()
@@ -83,11 +98,10 @@ struct SurveyPage: View {
                             }
                         }
                     }
-                    Section(header: Text("Working").font(.custom("Courier New", size: 24))) {
+                    Section(header: Text("Working").font(.custom(surveyFont, size: 24, relativeTo: .title))) {
                         HStack {
                             ForEach(1...5, id: \.self) { rating in
                                 MarkedBox(rating: rating, selectedRating: $ratings[3])
-                                //  .overlay(Text("\(rating)").foregroundColor(.white))
                                     .onTapGesture {
                                         ratings[3] = rating
                                         calculateTotalScore()
@@ -96,11 +110,10 @@ struct SurveyPage: View {
                             }
                         }
                     }
-                    Section(header: Text("Social Gathering").font(.custom("Courier New", size: 24))) {
+                    Section(header: Text("Social Gathering").font(.custom(surveyFont, size: 24, relativeTo: .title))) {
                         HStack {
                             ForEach(1...5, id: \.self) { rating in
                                 MarkedBox(rating: rating, selectedRating: $ratings[4])
-                                // .overlay(Text("\(rating)").foregroundColor(.white))
                                     .onTapGesture {
                                         ratings[5] = rating
                                         calculateTotalScore()
@@ -109,40 +122,62 @@ struct SurveyPage: View {
                             }
                         }
                     }
-                    Spacer()
-                }
-            }
-            .overlay(
-                Button(action: {
-                    isFormSubmitted.toggle()
-                }) {
-                    Text("Submit")
-                        .font(.custom("Courier New", size: 18))
-                        .fontWeight(.bold)
                     
                 }
-                    .padding()
-                    .alert(isPresented: $isFormSubmitted) {
-                        Alert(
-                            title: Text("Form Submitted"),
-                            message: Text("Total Score: \(totalScore)"),
-                            dismissButton: .default(Text("Ok"))
-                        )
-                    },
-                alignment: .bottom
-            )
+            }
+            
+            .overlay(alignment: .bottom) {
+                Button {
+                    isShowingAlert = true
+                } label: {
+                    NavigationLink(destination: SocoHome()) {
+                        Text("Submit")
+                            .foregroundColor(.black)
+                            .font(.custom(surveyFont, size: 18, relativeTo: .title))
+                            .fontWeight(.bold)
+                    }
+                }
+                .padding()
+                .alert("Form Submitted", isPresented: $isShowingAlert) {
+                    Button("ok") {
+                            userHasCompletedSurvey = true
+                    }
+                } message: {
+                    Text("Total Score: \(totalScore)")
+                }
+                
+            }
             
         }
     }
     private func calculateTotalScore() {
-        totalScore = ratings.reduce(0, +)
-        
+        var sum = 0
+        for i in 0..<ratings.count {
+            switch ratings[i] {
+            case 2:
+                sum += 2
+            case 3:
+                sum += 3
+            case 4:
+                sum += 4
+            case 5:
+                sum += 5
+            default:
+                break
+            }
+        }
     }
 }
 
+struct DummyView: View {
+    @State var userHasCompletedSurvey = false
+    var body: some View {
+        SurveyPage(userHasCompletedSurvey: $userHasCompletedSurvey)
+    }
+}
 
 struct SurveyPage_Previews: PreviewProvider {
     static var previews: some View {
-        SurveyPage()
+        DummyView()
     }
 }

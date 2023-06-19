@@ -11,8 +11,7 @@ struct SurveyQuestions: Codable {
     var id = UUID()
     var message: String
     var environments: String
-   // var marking: String
-   // var score: Int
+
 }
 
-//@State private var totalStars
+

@@ -11,7 +11,8 @@ import SwiftUI
 struct SoCoApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            //TODO: if user has never opened app, go to first page (use @AppStorage)
+            SoCoContent()
         }
     }
 }
