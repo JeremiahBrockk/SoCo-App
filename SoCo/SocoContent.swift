@@ -8,7 +8,9 @@
 import SwiftUI
 
 struct SoCoContent: View {
-    @State var userHasCompletedSurvey = false
+   
+    
+    @AppStorage("userHasCompletedSurvey") var userHasCompletedSurvey = false
     
     var body: some View {
         //TODO: if user has never opened app, go to first page (use @AppStorage)
@@ -19,6 +21,9 @@ struct SoCoContent: View {
             } else {
                 SurveyPage(userHasCompletedSurvey: $userHasCompletedSurvey)
                  .transition(.slide)
+                 .onDisappear {
+                     userHasCompletedSurvey = true
+                 }
             }
         }
         .animation(.default, value: userHasCompletedSurvey)

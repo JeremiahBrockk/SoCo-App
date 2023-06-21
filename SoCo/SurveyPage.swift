@@ -24,6 +24,7 @@ struct MarkedBox: View {
 }
 
 struct SurveyPage: View {
+    @AppStorage("calculatedTotalScore") private var calculatedTotalScore = 0
     @State private var ratings: [Int] = [0, 0, 0, 0, 0]
     @Binding var userHasCompletedSurvey: Bool
     @State var isShowingAlert = false
@@ -132,7 +133,7 @@ struct SurveyPage: View {
                 } label: {
                     NavigationLink(destination: SocoHome()) {
                         Text("Submit")
-                            .foregroundColor(.black)
+                            .foregroundColor(Color("ColorB"))
                             .font(.custom(surveyFont, size: 18, relativeTo: .title))
                             .fontWeight(.bold)
                     }

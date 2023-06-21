@@ -16,19 +16,18 @@ struct CheckBox: View {
     var body: some View {
         Button {
             isChecked.toggle()
+            
         } label: {
             Image(systemName: imageName)
+                .foregroundColor(Color("ColorB"))
         }
     }
     
 }
 
 struct SocoHome: View {
-//    @State private var path = [ScenarioType]()
     @State private var isChecked = false
     @State private var showingModal = false
-    // Create your navigation path
-   // @State private var path = NavigationPath()
     @Environment(\.legibilityWeight) var legibilityWeight
     var mainFont: String {
         guard let legibilityWeight = legibilityWeight else {
@@ -44,10 +43,8 @@ struct SocoHome: View {
         }
     }
     var body: some View {
-        // Plug in your navigation path to the navigation stack
         NavigationStack {
             GeometryReader { geo in
-                
                 ZStack {
                     Spacer()
                     VStack(alignment: .center) {
@@ -60,7 +57,6 @@ struct SocoHome: View {
                                 .foregroundColor(Color("ColorT"))
                                 .bold()
                                 .font(.custom(mainFont, size:30, relativeTo: .title))
-                            
                             VStack {
                                 HStack {
                                     VStack {
@@ -119,13 +115,7 @@ struct SocoHome: View {
                                 Spacer()
                                 
                             }
-//                            NavigationLink(value: ScenarioType.job) {
-//                                Image("JobS")
-//                                    .resizable()
-//                                    .foregroundColor(Color("ColorT"))
-//                                    .frame(width: geo.size.width * 0.9, height: geo.size.height / 6)
-//                                    .cornerRadius(15)
-//                            }
+
                             NavigationLink(destination: ScenarioView(scenarioType: .job, scenarioIndex: 0)) {
                                 Image("JobS")
                                     .resizable()
@@ -266,10 +256,3 @@ struct ContentView_Previews: PreviewProvider {
             .previewDevice("iPad (10th generation)")
     }
 }
-//extension NavigationPath {
-//    mutating func removeAll() {
-//        while !self.isEmpty {
-//            self.removeLast()
-//        }
-//    }
-//}
