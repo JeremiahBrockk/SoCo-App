@@ -8,14 +8,19 @@
 import SwiftUI
 
 struct CheckBox: View {
-    @State var isChecked = false
+    @Binding var isChecked: [String: Bool]
+    let id: String
+    var checkedStates: Bool {
+        isChecked[id] ?? false
+     }
     var imageName: String {
-        isChecked ? "checkmark.square" : "square"
+     checkedStates ? "checkmark.square" : "square"
     }
     
     var body: some View {
         Button {
-            isChecked.toggle()
+            isChecked[id]?.toggle()
+            UserDefaults.standard.set(isChecked, forKey: "isChecked")
             
         } label: {
             Image(systemName: imageName)
@@ -26,7 +31,15 @@ struct CheckBox: View {
 }
 
 struct SocoHome: View {
-    @State private var isChecked = false
+    @State private var isChecked: [String: Bool] = [
+        "Say goodmorning to someone": false,
+        "Speak in front of a group": false,
+        "Post a picture online": false,
+        "Talk to someone new": false,
+        "Share an opinion or idea": false,
+        "Engage in positive self-talk": false,
+        "Attend a social event": false
+    ]
     @State private var showingModal = false
     @Environment(\.legibilityWeight) var legibilityWeight
     var mainFont: String {
@@ -180,7 +193,7 @@ struct SocoHome: View {
                                                     .font(.custom("AvenirNextCondensed", size:20, relativeTo: .title))
                                                     .foregroundColor(Color("ColorTT"))
                                                 Spacer()
-                                                CheckBox()
+                                                CheckBox(isChecked: $isChecked, id: "Say goodmorning to someone")
                                             }
                                             Divider()
                                             HStack{
@@ -188,7 +201,7 @@ struct SocoHome: View {
                                                     .font(.custom("AvenirNextCondensed", size:20, relativeTo: .title))
                                                     .foregroundColor(Color("ColorTT"))
                                                 Spacer()
-                                                CheckBox()
+                                                CheckBox(isChecked: $isChecked, id: "Speak in front of a group")
                                                 
                                             }
                                             Divider()
@@ -197,7 +210,7 @@ struct SocoHome: View {
                                                     .font(.custom("AvenirNextCondensed", size:20, relativeTo: .title))
                                                     .foregroundColor(Color("ColorTT"))
                                                 Spacer()
-                                                CheckBox()
+                                                CheckBox(isChecked: $isChecked, id: "Post a picture online")
                                                 
                                             }
                                             Divider()
@@ -206,7 +219,7 @@ struct SocoHome: View {
                                                     .font(.custom("AvenirNextCondensed", size:20, relativeTo: .title))
                                                     .foregroundColor(Color("ColorTT"))
                                                 Spacer()
-                                                CheckBox()
+                                                CheckBox(isChecked: $isChecked, id: "Talk to someone new")
                                                 
                                             }
                                         }
@@ -217,7 +230,7 @@ struct SocoHome: View {
                                                     .font(.custom("AvenirNextCondensed", size:20, relativeTo: .title))
                                                     .foregroundColor(Color("ColorTT"))
                                                 Spacer()
-                                                CheckBox()
+                                                CheckBox(isChecked: $isChecked, id: "Share an opinion or idea")
                                                 
                                             }
                                         }
@@ -227,7 +240,7 @@ struct SocoHome: View {
                                                 .font(.custom("AvenirNextCondensed", size:20, relativeTo: .title))
                                                 .foregroundColor(Color("ColorTT"))
                                             Spacer()
-                                            CheckBox()
+                                            CheckBox(isChecked: $isChecked, id: "Engage in positive self-talk")
                                             
                                         }
                                         Divider()
@@ -236,10 +249,16 @@ struct SocoHome: View {
                                                 .font(.custom("AvenirNextCondensed", size:20, relativeTo: .title))
                                                 .foregroundColor(Color("ColorTT"))
                                             Spacer()
-                                            CheckBox()
+                                            CheckBox(isChecked: $isChecked, id: "Attend a social event")
                                             
                                         }
                                     }
+//                                    .onAppear {
+//                                        isChecked = UserDefaults.standard.bool(forKey: "isChecked")
+//                                    }
+//                                    .onDisappear {
+//                                        UserDefaults.standard.set(isChecked, forKey: "isChecked")
+//                                    }
                                 }
                         }
                 }
