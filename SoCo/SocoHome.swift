@@ -91,11 +91,12 @@ struct SocoHome: View {
                                             .fontWeight(.bold)
                                             .foregroundColor(Color("ColorTT"))
                                             .multilineTextAlignment(.leading)
-                                        
+                                            
                                         HStack {
                                             Spacer()
                                             Image(systemName: "arrow.up.left.and.arrow.down.right")
                                                 .foregroundColor(Color("ColorTT"))
+                                                
                                                 .onTapGesture {
                                                     withAnimation {
                                                         showingModal = true
@@ -117,8 +118,8 @@ struct SocoHome: View {
                                 .font(.custom(mainFont, size:30, relativeTo: .title))
                                 .fontWeight(.medium)
                                 .foregroundColor(Color("ColorT"))
-                            
-                            Spacer()
+                                .padding()
+                           // Spacer()
                             HStack {
                                 Text("Job")
                                     .font(.custom(mainFont, size:30, relativeTo: .title))
@@ -168,9 +169,10 @@ struct SocoHome: View {
                                 .frame(width: geo.size.width * 0.7, height: geo.size.height * 3.0 / 6,alignment: .center)
                                 .cornerRadius(15)
                                 .overlay {
-                                    VStack(alignment: .leading) {
+                                    VStack(alignment: .trailing) {
                                         HStack {
                                             Image(systemName: "arrow.down.right.and.arrow.up.left")
+                                                .padding()
                                                 .foregroundColor(Color("ColorTT"))
                                                 .onTapGesture {
                                                     withAnimation {
@@ -253,12 +255,7 @@ struct SocoHome: View {
                                             
                                         }
                                     }
-//                                    .onAppear {
-//                                        isChecked = UserDefaults.standard.bool(forKey: "isChecked")
-//                                    }
-//                                    .onDisappear {
-//                                        UserDefaults.standard.set(isChecked, forKey: "isChecked")
-//                                    }
+                                    
                                 }
                         }
                 }

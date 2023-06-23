@@ -77,6 +77,7 @@ struct ScenarioView: View {
                                 .background(Color("ColorM"))
                                 .fontWeight(.medium)
                                 .cornerRadius(15)
+                                .padding()
                         }
                         
                     }
